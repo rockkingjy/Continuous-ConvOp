@@ -25,13 +25,21 @@ end
 % matconvnet
 if exist('external_libs/matconvnet/matlab', 'dir') == 7
     cd external_libs/matconvnet/matlab
-    vl_compilenn;
+    try
+        disp('Trying to compile MatConvNet with GPU support')
+        vl_compilenn('enableGpu', true)
+    catch err
+        warning('ECO:install', 'Could not compile MatConvNet with GPU support. Compiling for only CPU instead.\nVisit http://www.vlfeat.org/matconvnet/install/ for instructions of how to compile MatConvNet.\nNote: remember to move the mex-files after re-compiling.');
+        vl_compilenn;
+    end
     status = movefile('mex/vl_*.mex*');
     cd(home_dir)
     
     % donwload network
     cd feature_extraction
-    mkdir networks
+    if ~(exist('networks','dir')==7)
+        mkdir networks
+    end
     cd networks
     if ~(exist('imagenet-vgg-m-2048.mat', 'file') == 2)
         disp('Downloading the network "imagenet-vgg-m-2048.mat" from "http://www.vlfeat.org/matconvnet/models/imagenet-vgg-m-2048.mat"...')

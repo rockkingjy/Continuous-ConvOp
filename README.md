@@ -1,85 +1,13 @@
-### Check out <a href="https://github.com/martin-danelljan/ECO">our more recent tracker ECO</a>, which is based on C-COT. ECO achieves a <b>20-fold speedup</b> and further performance improvements compared to C-COT.
+## Installation and run
+This package requires matconvnet [1], if you want to use deep CNN features, and PDollar Toolbox [2], if you want to use HOG features. 
 
-
-# Continuous-ConvOp
-
-This MATLAB code implements Continuous Convolution Operator Tracker (C-COT).
-
-It is the top-ranked tracker in the Visual Object Tracking (VOT) challenge 2016. [9]
-
-
-## Publication
-
-Details about the tracker can be found in the ECCV 2016 paper:
-
-Martin Danelljan, Andreas Robinson, Fahad Khan, Michael Felsberg.  
-"Beyond Correlation Filters: Learning Continuous Convolution Operators for Visual Tracking."  
-In Proceedings of the European Conference on Computer Vision (ECCV), 2016.  
-[<a href="http://www.cvl.isy.liu.se/research/objrec/visualtracking/conttrack/C-COT_ECCV16.pdf">PDF</a>] [<a href="http://www.cvl.isy.liu.se/research/objrec/visualtracking/conttrack/C-COT_ECCV16_suppl.pdf">Supplementary</a>]
-
-Please cite the above publication if you use the code or compare with our C-COT tracker in your work. Bibtex entry:
-
-@InProceedings{DanelljanECCV2016,  
-  Title = {Beyond Correlation Filters: Learning Continuous Convolution Operators for Visual Tracking},  
-  Author = {Danelljan, Martin and Robinson, Andreas and Shahbaz Khan, Fahad and Felsberg, Michael},  
-  Booktitle = {ECCV},  
-  Year = {2016},  
-}
-
-
-## Project Webpage
-
-http://www.cvl.isy.liu.se/research/objrec/visualtracking/conttrack/index.html
-
-
-## Contact
-
-Martin Danelljan
-
-Email: martin.danelljan@liu.se  
-Webpage: http://users.isy.liu.se/cvl/marda26/
-
-
-## Installation
-
-### Using git clone
-
-1. Clone the GIT repository:
-
-   $ git clone https://github.com/martin-danelljan/Continuous-ConvOp.git
-
-2. Clone the submodules.  
-   In the repository directory, run the commands:
-
-   $ git submodule init  
-   $ git submodule update
-
-3. Start Matlab and navigate to the repository.  
-   Run the install script:
-
-   |>> install
-
-4. Run the demo script to test the tracker:
-
-   |>> demo
-
-
-Note:  
-This package requires matconvnet [1], if you want to use deep CNN features, and PDollar Toolbox [2], if you want to use HOG features. Both these externals are included as git submodules and should be installed by following step 2. above.
-
-
-### Without using git
-
-You could also downlad and install without using git. This is however not recommented since it will be harder to incorporate updates and you will not get the correct versions of matconvnet and PDollar Toolbox.
-
-1. Download ZIP file from https://github.com/martin-danelljan/Continuous-ConvOp and unpack it somewhere.
-
-2. Download matconvnet ZIP file from https://github.com/vlfeat/matconvnet and unpack it in the external_libs/matconvnet/ folder of the repository.
+Download matconvnet ZIP file from https://github.com/vlfeat/matconvnet and unpack it in the external_libs/matconvnet/ folder of the repository.
    
-   Download PDollar Toolbox ZIP file from https://github.com/pdollar/toolbox and unpack it in the external_libs/pdollar_toolbox/ folder of the repository.
-
-Lastly, perform steps 3. and 4. above.
-
+Download PDollar Toolbox ZIP file from https://github.com/pdollar/toolbox and unpack it in the external_libs/pdollar_toolbox/ folder of the repository.
+```
+install
+demo_ECO
+```
 
 ## Description and Instructions
 
