@@ -37,7 +37,7 @@ if exist('external_libs/matconvnet/matlab', 'dir') == 7
     
     % donwload network
     cd feature_extraction
-    if ~(exist('networks','dir')==7)
+    if exist('networks','dir')==7
         mkdir networks
     end
     cd networks
